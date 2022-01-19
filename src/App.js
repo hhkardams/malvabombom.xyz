@@ -1,16 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Malvabombom</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="source/styles/styles.css">
-</head>
-<body>
-    <header class="rainbow"> <p> <a href="https://twitter.com/malvabombom">@malvabombom</a></p> </header>
-    <div class="marvel">
+import logo from './logo.svg';
+import './App.css';
+
+function App() {
+  return (
+    <div className="App">
+      <header class="rainbow"> <p> <a href="https://twitter.com/malvabombom">@malvabombom</a></p> </header>
+      <div class="marvel">
         <section class="marvel__intro">
             <h1 class="shake_it">Hi, I’m <span class="marker">Martin</span> <span class="wave">👋</span></h1> 
             <p class="rainbow">Developer, Designer & Maker</p>
@@ -50,9 +45,12 @@
                 <a href="https://www.youtube.com/c/MetaDeveloperCircleCiudaddeMexico" class="fa fa-youtube box jump"></a>
             </div>
         </section>
+      </div>
+      <footer>
+          Made with 🌮 and Good Vibes 🍟
+      </footer>
     </div>
-    <footer>
-        Made with 🌮 and Good Vibes 🍟
-    </footer>
-</body>
-</html>
+  );
+}
+
+export default App;
