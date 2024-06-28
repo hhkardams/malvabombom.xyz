@@ -156,7 +156,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+
     .header-buttons {
       display: flex;
       align-items: center;
@@ -233,7 +233,7 @@ body {
     border-radius: 16px;
   }
   &__section {
-    margin-top: 40px;
+    // margin-top: 40px;
     ul {
       list-style: none;
       li a {
@@ -602,4 +602,8 @@ body {
   100% {
     transform: scale(1, 1) translateY(0);
   }
+}
+
+video {
+  background: transparent;
 }

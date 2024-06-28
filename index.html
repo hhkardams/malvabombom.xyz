@@ -6,17 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>holasoymalva</title>
     <link rel="icon" href="./source/img/favicon-16x16.png" type="image/png" />
-    <meta
-      name="description"
-      content="Malva is a software Engineer that works with Javascript, Earlang, Python, Golang and Java."
-    />
-    <meta
-      name="keywords"
-      content="HTML, FRONTEND, FULLSTACK, BACKEND, JAVASCRIPT, REACT.JS, VUE.JS, ANGULAR, GOLANG, PYTHON, SOFTWARE ENGINEER, DEVELOPER, JAVA, CREATIVE CODING"
-    />
-    <link 
-      rel="stylesheet" 
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <meta name="description" content="Malva is a software Engineer that works with Javascript, Earlang, Python, Golang and Java." />
+    <meta name="keywords" content="HTML, FRONTEND, FULLSTACK, BACKEND, JAVASCRIPT, REACT.JS, VUE.JS, ANGULAR, GOLANG, PYTHON, SOFTWARE ENGINEER, DEVELOPER, JAVA, CREATIVE CODING" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.3/dist/locomotive-scroll.min.css">
     <link rel="stylesheet" href="source/styles/styles.css" />
   </head>
 
@@ -28,7 +21,7 @@
         <button class="mode-toggle" type="button" id="modeButton"><p>🌞|🌜</p></button>
       </div>
     </header>
-    <div class="marvel">
+    <div class="marvel" data-scroll-container>
       <section class="marvel__intro">
         <h1 class="shake_it">
           <video
@@ -37,14 +30,14 @@
             loop
             muted
             playsinline
-            style="height: 140px; margin-bottom: -12px"
+            style="height: 140px; margin-bottom: -12px; background: transparent;"
           ></video>
           <br />
           <span id="intro">Hi, I’m <span class="t__marker">Martin</span><span class="wave">👋</span></span>
         </h1>
         <p class="t__rainbow" id="introDescription">Developer, Maker & Designer</p>
       </section>
-      <section class="marvel__section">
+      <section class="marvel__section" data-scroll data-scroll-speed="2">
         <h2><span class="t__marker">About</span> Me</h2>
         <p id="about">
           Hi <span class="wave">👋</span>, My name is
@@ -57,7 +50,7 @@
           impact on people's lives.
         </p>
       </section>
-      <section class="marvel__section">
+      <section class="marvel__section" data-scroll data-scroll-speed="2">
         <h2><span class="t__marker">Tech</span>Stack</h2>
         <p>
           My main technology stack is conformed by
@@ -92,7 +85,7 @@
           />
         </div>
       </section>
-      <section class="marvel__section">
+      <section class="marvel__section" data-scroll data-scroll-speed="2">
         <h2>My<span class="t__marker">Experience</span></h2>
         <p>
           In my career, I have had the opportunity to work on a wide range of
@@ -246,7 +239,7 @@
       </section>
 
       <!-- Project Section -->
-      <section class="marvel__section">
+      <section class="marvel__section" data-scroll data-scroll-speed="2">
         <h2>My<span class="t__marker">Projects</span></h2>
         <p>
           I'm Working full-time at
@@ -302,7 +295,7 @@
           </div>
         </div>
       </section>
-      <section class="marvel__section">
+      <section class="marvel__section" data-scroll data-scroll-speed="2">
         <h2><span class="t__marker">Contact</span>Me</h2>
         <p>
           I hope this website gives you a sense of who I am as a developer and a
@@ -354,7 +347,7 @@
           
         </div>
       </section>
-      <section class="marvel__section">
+      <section class="marvel__section" data-scroll data-scroll-speed="2">
         <h2><span class="t__marker">Contenido</span> y recursos</h2>
           <ul style="list-style: none;">
             <li class="shake_it"> 
@@ -382,6 +375,16 @@
       </section>
     </div>
     <footer class="t__rainbow">Made with 🌮 and Good Vibes 🍟</footer>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.3/dist/locomotive-scroll.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const scroll = new LocomotiveScroll({
+          el: document.querySelector('.marvel'),
+          smooth: true,
+          lerp: 0.1 // Ajusta este valor para cambiar la velocidad del efecto lerp
+        });
+      });
+    </script>
     <script src="source/scripts/translate.js"></script>
     <script src="source/scripts/mode.js"></script>
   </body>
